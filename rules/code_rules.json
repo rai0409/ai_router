@@ -1,0 +1,8 @@
+{
+  "code": {
+    "design": "llama_local",
+    "skeleton": "llama_local",
+    "impl": "llama_local",
+    "llm_review": "claude_sonnet"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "spec": {
+    "requirements": "llama_local",
+    "outline":      "llama_local",
+    "deep_draft":   "llama_local",
+    "consistency":  "claude_sonnet",
+    "final":        "claude_sonnet"
+  }
+}
+
