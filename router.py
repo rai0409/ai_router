@@ -31,30 +31,81 @@ SPEC_RULES = load_rules("spec_rules.json")
 CODE_RULES = load_rules("code_rules.json")
 
 # -----------------------------
+#  consistency 用レビュー共通テンプレ
+#  （Prompt Caching 対象）
+# -----------------------------
+
+CONSISTENCY_TEMPLATE = """
+あなたは日本語のソフトウェア仕様書のレビュー専門家です。
+
+【タスク】
+与えられた仕様書ドラフトをレビューし、重要な問題だけを指摘します。
+
+【レビュー観点】
+- 要求と仕様の不整合
+- 重要な観点の抜け漏れ
+- 曖昧・多義的な表現
+- 実装・運用上のリスク
+- 想定外ケース・エッジケースの見落とし
+
+【厳守事項】
+- 挨拶や前置き、説明文は一切書かない。
+- 下記フォーマット以外の文章は出力しない。
+- 指摘は重要なものから最大10件まで。
+- 全体で概ね1200文字以内に収める。
+- 出力はすべて日本語。
+
+【出力フォーマット】
+1. 指摘一覧
+   - No.1: 対象箇所の要約 / 問題点 / 影響 / 修正の方向性
+   - No.2: ...
+2. 改善提案の要約
+3. 必要であれば見出し構成の改善案
+""".strip()
+
+CONSISTENCY_SYSTEM_BLOCKS = [
+    {
+        "type": "text",
+        "text": CONSISTENCY_TEMPLATE,
+        "cache_control": {"type": "ephemeral"},
+    }
+]
+
+# -----------------------------
 # Providers 登録
 # -----------------------------
 
-PROVIDERS = {}
+PROVIDERS: Dict[str, object] = {}
 
 # ローカル Llama
 PROVIDERS["llama_local"] = LlamaLocal()
 
-# Claude Haiku（構造化）
+# Claude Haiku（軽量な構造化・要約など）
 try:
     PROVIDERS["claude_haiku"] = ClaudeProvider(
         model="claude-3-haiku-20240307",
         max_tokens=2048,
-        system_prompt="You are a cost-efficient assistant for structuring and checking specifications and code.",
+        system_prompt=(
+            "You are a cost-efficient assistant for structuring and checking "
+            "specifications and code. "
+            "When the user is Japanese, reply in Japanese. "
+            "Do not output greetings or explanations; only the requested content."
+        ),
+        temperature=0.2,
+        use_prompt_cache=False,
     )
 except Exception:
     pass
 
-# Claude Sonnet（論理チェック）
+# Claude Sonnet（論理チェック / consistency 専用、Prompt Caching 有効）
 try:
     PROVIDERS["claude_sonnet"] = ClaudeProvider(
-        model="claude-sonnet-4-5",
+        model="claude-sonnet-4-5",  # あなたの環境で動作確認済みのモデル名を使用
         max_tokens=4096,
-        system_prompt="You are a high-precision reviewer for specifications and code.",
+        system_prompt="",  # system は blocks で渡すので空
+        temperature=0.1,
+        use_prompt_cache=True,
+        cached_system_blocks=CONSISTENCY_SYSTEM_BLOCKS,
     )
 except Exception:
     pass
@@ -104,7 +155,8 @@ if __name__ == "__main__":
     messages = [
         {
             "role": "user",
-            "content": "日本語で、AIルーターの仕様書アウトラインを簡潔に作ってください。",
+            "content": "日本語で、AIルーターの仕様書アウトラインを簡潔に作ってください。"
+                       "挨拶や前置きは禁止し、Markdown の見出しだけを出力してください。",
         }
     ]
 

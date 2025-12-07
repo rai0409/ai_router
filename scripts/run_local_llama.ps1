@@ -2,7 +2,7 @@
 # ローカル Llama サーバー起動スクリプト
 
 $llamaExe  = "C:\Users\raira\projects\llama.cpp\build\bin\llama-server.exe"
-$modelPath = "C:\Users\raira\projects\llama.cpp\models\Meta-Llama-3-8B-Instruct-Q5_K_M.gguf"
+$modelPath = "C:\models\llama3-8b-instruct-q5_k_m.gguf"
 
 & $llamaExe `
   -m $modelPath `
