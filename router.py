@@ -2,11 +2,13 @@
 import json
 import os
 from pathlib import Path
-from typing import Dict
-
+from typing import Protocol, Dict
+from contextlib import suppress
 from providers.llama_local import LlamaLocal
 from providers.claude_api import ClaudeProvider
 
+class ChatProvider(Protocol):
+    def chat(self, messages: list[dict[str, str]]) -> str: ...
 # -----------------------------
 #  プロジェクトの絶対パス取得
 # -----------------------------
@@ -75,15 +77,15 @@ CONSISTENCY_SYSTEM_BLOCKS = [
 # Providers 登録
 # -----------------------------
 
-PROVIDERS: Dict[str, object] = {}
+PROVIDERS: Dict[str, ChatProvider] = {}
 
 # ローカル Llama
 PROVIDERS["llama_local"] = LlamaLocal()
 
 # Claude Haiku（軽量な構造化・要約など）
-try:
+with suppress(Exception):
     PROVIDERS["claude_haiku"] = ClaudeProvider(
-        model="claude-3-haiku-20240307",
+        model= "claude-4-5-haiku",
         max_tokens=2048,
         system_prompt=(
             "You are a cost-efficient assistant for structuring and checking "
@@ -94,11 +96,9 @@ try:
         temperature=0.2,
         use_prompt_cache=False,
     )
-except Exception:
-    pass
 
 # Claude Sonnet（論理チェック / consistency 専用、Prompt Caching 有効）
-try:
+with suppress(Exception):
     PROVIDERS["claude_sonnet"] = ClaudeProvider(
         model="claude-sonnet-4-5",  # あなたの環境で動作確認済みのモデル名を使用
         max_tokens=4096,
@@ -107,8 +107,6 @@ try:
         use_prompt_cache=True,
         cached_system_blocks=CONSISTENCY_SYSTEM_BLOCKS,
     )
-except Exception:
-    pass
 
 
 # -----------------------------
@@ -134,14 +132,36 @@ def run(task_type: str, section: str, content: str) -> str:
             f"利用可能: {list(rules.keys())}"
         )
 
-    provider_name = rules[section]
-    provider = PROVIDERS.get(provider_name)
+    resolved = rules[section]
+    if isinstance(resolved, str):
+        provider_names = [resolved]
+    elif isinstance(resolved, (list, tuple)):
+        provider_names = list(resolved)
+    else:
+        raise TypeError(
+            f"Invalid provider definition for role '{section}': {resolved!r}"
+        )
+    if not provider_names:
+        raise RuntimeError(f"Provider list is empty for role '{section}'.")
 
-    if provider is None:
-        raise ValueError(f"Provider '{provider_name}' が未定義です。")
+    last_exception: Exception | None = None
 
-    messages = [{"role": "user", "content": content}]
-    return provider.chat(messages)
+    for provider_name in provider_names:
+        try:
+            provider = PROVIDERS.get(provider_name)
+            if provider is None:
+                raise KeyError(f"Provider '{provider_name}' が未定義です。")
+
+            messages = [{"role": "user", "content": content}]
+            return provider.chat(messages)
+        except Exception as exc:  # noqa: BLE001
+            last_exception = exc
+            continue
+
+    if last_exception is not None:
+        raise last_exception
+
+    raise RuntimeError(f"All providers failed for role '{section}', but no exception captured.")
 
 
 # -----------------------------

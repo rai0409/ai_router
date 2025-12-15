@@ -1,0 +1,22 @@
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+exclude = [
+  "prompt_corpus/raw",
+  "**/*.ipynb",
+]
+
+[tool.ruff.lint]
+select = [
+  "E",    # syntax errors
+  "F",    # undefined / unused
+  "B",    # bugbear (bug patterns)
+  "SIM",  # simplifications
+]
+ignore = [
+  "E203", # black 互換
+  "B904", # re-raise without `from`（router.py 仕様上 OK）
+]
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
