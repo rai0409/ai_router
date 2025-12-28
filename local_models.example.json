@@ -1,0 +1,23 @@
+[
+  {
+    "file": "deepseek-coder-v2-lite-q5_k_m.gguf",
+    "path": "/mnt/c/models/deepseek-coder-v2-lite-q5_k_m.gguf",
+    "family": "deepseek",
+    "role": "code_impl",
+    "quant": "q5_k_m"
+  },
+  {
+    "file": "deepseek-r1-distill-llama-8b-q5_k_m.gguf",
+    "path": "/mnt/c/models/deepseek-r1-distill-llama-8b-q5_k_m.gguf",
+    "family": "deepseek",
+    "role": "reasoning",
+    "quant": "q5_k_m"
+  },
+  {
+    "file": "llama3-8b-instruct-q5_k_m.gguf",
+    "path": "/mnt/c/models/llama3-8b-instruct-q5_k_m.gguf",
+    "family": "llama",
+    "role": "general",
+    "quant": "q5_k_m"
+  }
+]

@@ -1,25 +1,40 @@
-# Python キャッシュ
+# Python
 __pycache__/
-*.py[cod]
-*.pyo
+*.pyc
+.coverage
+.pytest_cache/
+.mypy_cache/
 
-# 仮想環境（このプロジェクト専用）
+# Virtual env
 .venv/
 
-# 生成物（AI 出力）
-spec_output/
-code_output/
-logs/
-
-# 環境変数・秘密情報
+# Generated / experimental
+html_docs/
+infra/
+pkps/
+specs/
+tools/
+prompting_raw/
+local_models.json
+tools/html_outline_raw.txt
 .env
-.env.*
-*.log
+spec_output/
 
-# エディタ設定
-.vscode/
-.idea/
+# ---- runtime caches / venv ----
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
-# OS ごみ
-.DS_Store
-Thumbs.db
+# ---- generated outputs ----
+spec_output/
+
+# ---- raw assets (must live outside repo) ----
+prompting_raw/
+prompt_corpus/raw/
+html_docs/
+
+# Local-only model registry
+local_models.json
+scripts/config.py
