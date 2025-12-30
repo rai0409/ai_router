@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 # HTML を集めるフォルダ
 TARGET_DIR = "/home/rai/ai_router/html_docs"
 
+
 def extract_outline(path):
     with open(path, "r", encoding="utf-8", errors="ignore") as f:
         soup = BeautifulSoup(f, "html.parser")
@@ -16,6 +17,7 @@ def extract_outline(path):
                 headers.append(f"{tag}: {text}")
 
     return headers
+
 
 def main():
     for file in os.listdir(TARGET_DIR):
@@ -34,6 +36,7 @@ def main():
             print(" -", h)
 
         print("==============================")
+
 
 if __name__ == "__main__":
     main()

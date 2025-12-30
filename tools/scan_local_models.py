@@ -1,5 +1,4 @@
 from pathlib import Path
-import platform
 import re
 import json
 
@@ -13,7 +12,6 @@ SEARCH_DIR_CANDIDATES = [
     Path("/mnt/c/models"),
     Path("/mnt/d/models"),
     Path("/opt/models"),
-
     # Windows (WSL からのマウント想定)
     Path("/mnt/c/llama_models"),
 ]
@@ -24,6 +22,7 @@ GGUF_EXT = ".gguf"
 # -----------------------------
 # モデル種別判定ロジック
 # -----------------------------
+
 
 def classify_model(path: Path) -> dict:
     name = path.name.lower()
@@ -63,6 +62,7 @@ def classify_model(path: Path) -> dict:
 # メイン探索処理
 # -----------------------------
 
+
 def scan_models():
     found = []
 
@@ -89,11 +89,7 @@ if __name__ == "__main__":
 
     print("\n=== Local GGUF Models Found ===\n")
     for m in models:
-        print(
-            f"[{m['family']}/{m['role']}] "
-            f"{m['file']}  ({m['quant']})\n"
-            f"  -> {m['path']}\n"
-        )
+        print(f"[{m['family']}/{m['role']}] {m['file']}  ({m['quant']})\n  -> {m['path']}\n")
 
     # JSON 出力（router / providers 用）
     out = Path("local_models.json")

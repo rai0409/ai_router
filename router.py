@@ -7,8 +7,11 @@ from contextlib import suppress
 from providers.llama_local import LlamaLocal
 from providers.claude_api import ClaudeProvider
 
+
 class ChatProvider(Protocol):
     def chat(self, messages: list[dict[str, str]]) -> str: ...
+
+
 # -----------------------------
 #  プロジェクトの絶対パス取得
 # -----------------------------
@@ -85,7 +88,7 @@ PROVIDERS["llama_local"] = LlamaLocal()
 # Claude Haiku（軽量な構造化・要約など）
 with suppress(Exception):
     PROVIDERS["claude_haiku"] = ClaudeProvider(
-        model= "claude-4-5-haiku",
+        model="claude-4-5-haiku",
         max_tokens=2048,
         system_prompt=(
             "You are a cost-efficient assistant for structuring and checking "
@@ -113,6 +116,7 @@ with suppress(Exception):
 # Router 本体
 # -----------------------------
 
+
 def run(task_type: str, section: str, content: str) -> str:
     """task_type と rules に従って Provider を自動選択"""
     if task_type == "spec":
@@ -138,9 +142,7 @@ def run(task_type: str, section: str, content: str) -> str:
     elif isinstance(resolved, (list, tuple)):
         provider_names = list(resolved)
     else:
-        raise TypeError(
-            f"Invalid provider definition for role '{section}': {resolved!r}"
-        )
+        raise TypeError(f"Invalid provider definition for role '{section}': {resolved!r}")
     if not provider_names:
         raise RuntimeError(f"Provider list is empty for role '{section}'.")
 
@@ -176,7 +178,7 @@ if __name__ == "__main__":
         {
             "role": "user",
             "content": "日本語で、AIルーターの仕様書アウトラインを簡潔に作ってください。"
-                       "挨拶や前置きは禁止し、Markdown の見出しだけを出力してください。",
+            "挨拶や前置きは禁止し、Markdown の見出しだけを出力してください。",
         }
     ]
 

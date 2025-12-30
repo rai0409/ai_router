@@ -40,9 +40,7 @@ class LlamaLocal(BaseProvider):
 
         for attempt in range(1, MAX_RETRIES_WHEN_LOADING + 1):
             try:
-                res = requests.post(
-                    self.url, json=payload, timeout=REQUEST_TIMEOUT_SEC
-                )
+                res = requests.post(self.url, json=payload, timeout=REQUEST_TIMEOUT_SEC)
             except requests.RequestException as e:
                 # ネットワークレベルのエラーは即終了
                 raise RuntimeError(f"LlamaLocal request failed: {e}") from e
@@ -54,9 +52,7 @@ class LlamaLocal(BaseProvider):
                     time.sleep(RETRY_SLEEP_SEC)
                     continue
 
-                raise RuntimeError(
-                    f"LlamaLocal request failed (503): {res.text}"
-                )
+                raise RuntimeError(f"LlamaLocal request failed (503): {res.text}")
 
             if not res.ok:
                 raise RuntimeError(
@@ -67,10 +63,6 @@ class LlamaLocal(BaseProvider):
             try:
                 return data["choices"][0]["message"]["content"]
             except (KeyError, IndexError, TypeError) as e:
-                raise RuntimeError(
-                    f"Unexpected LlamaLocal response: {data}"
-                ) from e
+                raise RuntimeError(f"Unexpected LlamaLocal response: {data}") from e
 
-        raise RuntimeError(
-            f"LlamaLocal request failed after retries. last_error={last_error_text}"
-        )
+        raise RuntimeError(f"LlamaLocal request failed after retries. last_error={last_error_text}")

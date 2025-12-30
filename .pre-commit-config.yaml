@@ -1,0 +1,18 @@
+repos:
+  # ---- Ruff：Lint（静的チェック） ----
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.12.2
+    hooks:
+      - id: ruff
+      - id: ruff-format
+
+  # ---- mypy：型チェック ----
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.18.1
+    hooks:
+      - id: mypy
+        args: ["--config-file=pyproject.toml", "."]
+        pass_filenames: false
+        additional_dependencies:
+          - pytest
+          - types-requests

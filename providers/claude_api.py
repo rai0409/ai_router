@@ -28,6 +28,7 @@ ANTHROPIC_PROMPT_CACHING_BETA = "prompt-caching-2024-07-31"
 
 class ClaudeAPIError(Exception):
     """Claude API 呼び出し時のエラー用例外クラス。"""
+
     pass
 
 
@@ -181,9 +182,7 @@ class ClaudeProvider:
 
         if not res.ok:
             # 404 / 401 / 400 などはここで検知
-            raise ClaudeAPIError(
-                f"Anthropic API エラー: status={res.status_code}, body={res.text}"
-            )
+            raise ClaudeAPIError(f"Anthropic API エラー: status={res.status_code}, body={res.text}")
 
         data = res.json()
 
@@ -204,11 +203,7 @@ class ClaudeProvider:
 
             first_content = content_list[0]
             if first_content.get("type") != "text":
-                raise ClaudeAPIError(
-                    f"テキスト以外の content が返却されました: {first_content}"
-                )
+                raise ClaudeAPIError(f"テキスト以外の content が返却されました: {first_content}")
             return first_content["text"]
         except (KeyError, IndexError, TypeError) as e:
-            raise ClaudeAPIError(
-                f"予期しないレスポンス形式です: {data}"
-            ) from e
+            raise ClaudeAPIError(f"予期しないレスポンス形式です: {data}") from e
