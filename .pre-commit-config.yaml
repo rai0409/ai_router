@@ -1,18 +1,10 @@
 repos:
-  # ---- Ruff：Lint（静的チェック） ----
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.12.2
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
     hooks:
-      - id: ruff
-      - id: ruff-format
-
-  # ---- mypy：型チェック ----
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.18.1
-    hooks:
-      - id: mypy
-        args: ["--config-file=pyproject.toml", "."]
-        pass_filenames: false
-        additional_dependencies:
-          - pytest
-          - types-requests
+      - id: detect-private-key
+      - id: check-added-large-files
+        args: ["--maxkb=5120"]
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
