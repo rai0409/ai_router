@@ -1,0 +1,677 @@
+
+==============================
+FILE: Prompting best practices - Claude Docs.html  (1098911 bytes)
+------------------------------
+ - h1: Prompting best practices
+ - h2: General principles
+ - h2: Guidance for specific situations
+ - h2: Migration considerations
+ - h3: Be explicit with your instructions
+ - h3: Example: Creating an analytics dashboard
+ - h3: Add context to improve performance
+ - h3: Example: Formatting preferences
+ - h3: Be vigilant with examples & details
+ - h3: Long-horizon reasoning and state tracking
+ - h3: Example: State tracking
+ - h3: Communication style
+ - h3: Balance verbosity
+ - h3: Tool usage patterns
+ - h3: Example: Explicit instructions
+ - h3: Tool usage and triggering
+ - h3: Control the format of responses
+ - h3: Research and information gathering
+ - h3: Subagent orchestration
+ - h3: Model self-knowledge
+ - h3: Thinking sensitivity
+ - h3: Leverage thinking & interleaved thinking capabilities
+ - h3: Document creation
+ - h3: Improved vision capabilities
+ - h3: Optimize parallel tool calling
+ - h3: Reduce file creation in agentic coding
+ - h3: Overeagerness and file creation
+ - h3: Frontend design
+ - h3: Avoid focusing on passing tests and hard-coding
+ - h3: Encouraging code exploration
+ - h3: Minimizing hallucinations in agentic coding
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: Be clear, direct, and detailed - Claude Docs.html  (898743 bytes)
+------------------------------
+ - h1: Be clear, direct, and detailed
+ - h2: How to be clear, contextual, and specific
+ - h3: Examples
+ - h3: Example: Anonymizing customer feedback
+ - h3: Example: Crafting a marketing email campaign
+ - h3: Example: Incident response
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: Claude Developer Platform - Claude Docs.html  (1178906 bytes)
+------------------------------
+ - h1: Claude Developer Platform
+ - h3: December 4, 2025
+ - h3: November 24, 2025
+ - h3: November 19, 2025
+ - h3: November 18, 2025
+ - h3: November 14, 2025
+ - h3: October 28, 2025
+ - h3: October 16, 2025
+ - h3: October 15, 2025
+ - h3: September 29, 2025
+ - h3: September 17, 2025
+ - h3: September 16, 2025
+ - h3: September 10, 2025
+ - h3: September 8, 2025
+ - h3: September 5, 2025
+ - h3: September 3, 2025
+ - h3: September 2, 2025
+ - h3: August 27, 2025
+ - h3: August 26, 2025
+ - h3: August 19, 2025
+ - h3: August 18, 2025
+ - h3: August 13, 2025
+ - h3: August 12, 2025
+ - h3: August 11, 2025
+ - h3: August 8, 2025
+ - h3: August 5, 2025
+ - h3: July 28, 2025
+ - h3: July 24, 2025
+ - h3: July 21, 2025
+ - h3: July 17, 2025
+ - h3: July 3, 2025
+ - h3: June 30, 2025
+ - h3: June 23, 2025
+ - h3: June 11, 2025
+ - h3: May 22, 2025
+ - h3: May 21, 2025
+ - h3: May 7, 2025
+ - h3: May 1, 2025
+ - h3: April 9th, 2025
+ - h3: March 31st, 2025
+ - h3: February 27th, 2025
+ - h3: February 24th, 2025
+ - h3: February 10th, 2025
+ - h3: January 31st, 2025
+ - h3: January 23rd, 2025
+ - h3: January 21st, 2025
+ - h3: January 15th, 2025
+ - h3: January 10th, 2025
+ - h3: December 19th, 2024
+ - h3: December 17th, 2024
+ - h3: December 4th, 2024
+ - h3: November 21st, 2024
+ - h3: November 20th, 2024
+ - h3: November 13th, 2024
+ - h3: November 6th, 2024
+ - h3: November 4th, 2024
+ - h3: November 1st, 2024
+ - h3: October 22nd, 2024
+ - h3: October 8th, 2024
+ - h3: October 3rd, 2024
+ - h3: September 10th, 2024
+ - h3: September 4th, 2024
+ - h3: August 22nd, 2024
+ - h3: August 19th, 2024
+ - h3: August 14th, 2024
+ - h3: July 15th, 2024
+ - h3: July 9th, 2024
+ - h3: June 27th, 2024
+ - h3: June 20th, 2024
+ - h3: May 30th, 2024
+ - h3: May 10th, 2024
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: Claude Code Analytics API - Claude Docs.html  (1041527 bytes)
+------------------------------
+ - h1: Claude Code Analytics API
+ - h2: Quick start
+ - h2: Claude Code Analytics API
+ - h2: Pagination
+ - h2: Common use cases
+ - h2: Frequently asked questions
+ - h2: See also
+ - h3: Key concepts
+ - h3: Basic examples
+ - h3: Request parameters
+ - h3: Available metrics
+ - h3: Response structure
+ - h3: How fresh is the analytics data?
+ - h3: Can I get real-time metrics?
+ - h3: How are users identified in the data?
+ - h3: What's the data retention period?
+ - h3: Which Claude Code deployments are supported?
+ - h3: What does it cost to use this API?
+ - h3: How do I calculate tool acceptance rates?
+ - h3: What time zone is used for the date parameter?
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: Prompt engineering overview - Claude Docs.html  (894697 bytes)
+------------------------------
+ - h1: Prompt engineering overview
+ - h2: Before prompt engineering
+ - h2: When to prompt engineer
+ - h2: How to prompt engineer
+ - h2: Prompt engineering tutorial
+ - h3: Prompting vs. finetuning
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: Common workflows - Claude Code Docs.html  (1246895 bytes)
+------------------------------
+ - h1: Common workflows
+ - h2: ​Understand new codebases
+ - h2: ​Fix bugs efficiently
+ - h2: ​Refactor code
+ - h2: ​Use specialized subagents
+ - h2: ​Use Plan Mode for safe code analysis
+ - h2: ​Work with tests
+ - h2: ​Create pull requests
+ - h2: ​Handle documentation
+ - h2: ​Work with images
+ - h2: ​Reference files and directories
+ - h2: ​Use extended thinking
+ - h2: ​Resume previous conversations
+ - h2: ​Run parallel Claude Code sessions with Git worktrees
+ - h2: ​Use Claude as a unix-style utility
+ - h2: ​Create custom slash commands
+ - h2: ​Ask Claude about its capabilities
+ - h2: ​Next steps
+ - h2: Claude Code reference implementation
+ - h3: ​Get a quick codebase overview
+ - h3: ​Find relevant code
+ - h3: ​When to use Plan Mode
+ - h3: ​How to use Plan Mode
+ - h3: ​Example: Planning a complex refactor
+ - h3: ​Configure Plan Mode as default
+ - h3: ​Add Claude to your verification process
+ - h3: ​Pipe in, pipe out
+ - h3: ​Control output format
+ - h3: ​Create project-specific commands
+ - h3: ​Add command arguments with $ARGUMENTS
+ - h3: ​Create personal slash commands
+ - h3: ​Example questions
+==============================
+
+==============================
+FILE: Prompt engineering _ How-to Guides.html  (741790 bytes)
+------------------------------
+ - h1: Prompt engineering
+ - h2: What is prompt engineering?
+ - h2: Crafting effective prompts
+ - h2: Prompting techniques
+ - h3: Table Of ContentsPrompt Engineering (Updated)
+ - h3: Stylization
+ - h3: Formatting
+ - h3: Restrictions
+ - h3: Zero- and few-shot prompting
+ - h3: Role-based prompts
+ - h3: Chain-of-thought prompting
+ - h3: Self-consistency
+ - h3: Retrieval-augmented generation
+ - h3: Limiting extraneous tokens
+ - h3: Program-aided language models
+ - h3: Reducing hallucinations
+==============================
+
+==============================
+FILE: Use XML tags to structure your prompts - Claude Docs.html  (900891 bytes)
+------------------------------
+ - h1: Use XML tags to structure your prompts
+ - h2: Why use XML tags?
+ - h2: Tagging best practices
+ - h3: Examples
+ - h3: Example: Generating financial reports
+ - h3: Example: Legal contract analysis
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: Computer use tool - Claude Docs.html  (1322111 bytes)
+------------------------------
+ - h1: Computer use tool
+ - h2: Overview
+ - h2: Model compatibility
+ - h2: Security considerations
+ - h2: Quick start
+ - h2: How computer use works
+ - h2: How to implement computer use
+ - h2: Understand computer use limitations
+ - h2: Pricing
+ - h2: Next steps
+ - h3: The computing environment
+ - h3: Start with our reference implementation
+ - h3: Understanding the multi-agent loop
+ - h3: Optimize model performance with prompting
+ - h3: System prompts
+ - h3: Available actions
+ - h3: Example actions
+ - h3: Tool parameters
+ - h3: Enable thinking capability in Claude 4 models and Claude Sonnet 3.7
+ - h3: Augmenting computer use with other tools
+ - h3: Build a custom computer use environment
+ - h3: Screenshot capture failure
+ - h3: Invalid coordinates
+ - h3: Action execution failure
+ - h3: Use appropriate display resolution
+ - h3: Implement proper screenshot handling
+ - h3: Add action delays
+ - h3: Validate actions before execution
+ - h3: Log actions for debugging
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: System Prompts - Claude Docs.html  (1290416 bytes)
+------------------------------
+ - h1: System Prompts
+ - h2: Claude Opus 4.5
+ - h2: Claude Haiku 4.5
+ - h2: Claude Sonnet 4.5
+ - h2: Claude Opus 4.1
+ - h2: Claude Opus 4
+ - h2: Claude Sonnet 4
+ - h2: Claude Sonnet 3.7
+ - h2: Claude Sonnet 3.5
+ - h2: Claude Haiku 3.5
+ - h2: Claude Opus 3
+ - h2: Claude Haiku 3
+ - h3: November 24, 2025
+ - h3: November 19, 2025
+ - h3: October 15, 2025
+ - h3: November 19, 2025
+ - h3: September 29, 2025
+ - h3: August 5, 2025
+ - h3: August 5, 2025
+ - h3: July 31st, 2025
+ - h3: May 22nd, 2025
+ - h3: August 5, 2025
+ - h3: July 31st, 2025
+ - h3: May 22nd, 2025
+ - h3: Feb 24th, 2025
+ - h3: Nov 22nd, 2024
+ - h3: Oct 22nd, 2024
+ - h3: Sept 9th, 2024
+ - h3: July 12th, 2024
+ - h3: Oct 22, 2024
+ - h3: July 12th, 2024
+ - h3: July 12th, 2024
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: Use examples (multishot prompting) to guide Claude's behavior - Claude Docs.html  (885363 bytes)
+------------------------------
+ - h1: Use examples (multishot prompting) to guide Claude's behavior
+ - h2: Why use examples?
+ - h2: Crafting effective examples
+ - h3: Example: Analyzing customer feedback
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: Giving Claude a role with a system prompt - Claude Docs.html  (923339 bytes)
+------------------------------
+ - h1: Giving Claude a role with a system prompt
+ - h2: Why use role prompting?
+ - h2: How to give Claude a role
+ - h2: Examples
+ - h3: Example 1: Legal contract analysis
+ - h3: Legal contract analysis without role prompting
+ - h3: Legal contract analysis with role prompting
+ - h3: Example 2: Financial analysis
+ - h3: Financial analysis without role prompting
+ - h3: Financial analysis with role prompting
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: Modifying system prompts - Claude Docs.html  (1117348 bytes)
+------------------------------
+ - h1: Modifying system prompts
+ - h2: Understanding system prompts
+ - h2: Methods of modification
+ - h2: Comparison of all four approaches
+ - h2: Use cases and best practices
+ - h2: Combining approaches
+ - h2: See also
+ - h3: Method 1: CLAUDE.md files (project-level instructions)
+ - h3: Method 2: Output styles (persistent configurations)
+ - h3: Method 3: UsingsystemPromptwith append
+ - h3: Method 4: Custom system prompts
+ - h3: When to use CLAUDE.md
+ - h3: When to use output styles
+ - h3: When to usesystemPromptwith append
+ - h3: When to use customsystemPrompt
+ - h3: Example: Output style with session-specific additions
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: Context editing - Claude Docs.html  (1379439 bytes)
+------------------------------
+ - h1: Context editing
+ - h2: Overview
+ - h2: Server-side strategies
+ - h2: Supported models
+ - h2: Tool result clearing usage
+ - h2: Thinking block clearing usage
+ - h2: Configuration options for tool result clearing
+ - h2: Context editing response
+ - h2: Token counting
+ - h2: Using with the Memory Tool
+ - h2: Client-side compaction (SDK)
+ - h3: Tool result clearing
+ - h3: Thinking block clearing
+ - h3: Advanced configuration
+ - h3: Configuration options for thinking block clearing
+ - h3: Combining strategies
+ - h3: How compaction works
+ - h3: Using compaction
+ - h3: Configuration options
+ - h3: Default summary prompt
+ - h3: View full default prompt
+ - h3: Limitations
+ - h3: Monitoring compaction
+ - h3: When to use compaction
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: Llama Models.html  (681997 bytes)
+------------------------------
+ - h1: Llama Models
+ - h2: Llama 3.1 Enhancements
+ - h2: Prompt Formatting
+ - h2: Upgrading your application from Llama 3 to Llama 3.1
+ - h3: Table Of ContentsModels
+==============================
+
+==============================
+FILE: Memory tool - Claude Docs.html  (1113520 bytes)
+------------------------------
+ - h1: Memory tool
+ - h2: Use cases
+ - h2: How it works
+ - h2: Supported models
+ - h2: Getting started
+ - h2: Basic usage
+ - h2: Tool commands
+ - h2: Prompting guidance
+ - h2: Security considerations
+ - h2: Error handling
+ - h2: Using with Context Editing
+ - h3: Example: How memory tool calls work
+ - h3: view
+ - h3: create
+ - h3: str_replace
+ - h3: insert
+ - h3: delete
+ - h3: rename
+ - h3: Sensitive information
+ - h3: File storage size
+ - h3: Memory expiration
+ - h3: Path traversal protection
+ - h3: How they work together
+ - h3: Example workflow
+ - h3: Configuration
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: Let Claude think (chain of thought prompting) to increase performance - Claude Docs.html  (921340 bytes)
+------------------------------
+ - h1: Let Claude think (chain of thought prompting) to increase performance
+ - h2: Before implementing CoT
+ - h2: How to prompt for thinking
+ - h3: Why let Claude think?
+ - h3: Why not let Claude think?
+ - h3: Example: Writing donor emails (basic CoT)
+ - h3: Example: Writing donor emails (guided CoT)
+ - h3: Example: Writing donor emails (structured guided CoT)
+ - h3: Examples
+ - h3: Example: Financial analysis without thinking
+ - h3: Example: Financial analysis with thinking
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: What's new in Claude 4.5 - Claude Docs.html  (1224159 bytes)
+------------------------------
+ - h1: What's new in Claude 4.5
+ - h2: Key improvements in Opus 4.5 over Opus 4.1
+ - h2: Key improvements in Sonnet 4.5 over Sonnet 4
+ - h2: Key improvements in Haiku 4.5 over Haiku 3.5
+ - h2: New API features
+ - h2: Features introduced in Claude 4
+ - h2: Pricing and availability
+ - h2: Migration guide
+ - h2: Next steps
+ - h3: Maximum intelligence
+ - h3: Effort parameter
+ - h3: Computer use excellence
+ - h3: Practical performance
+ - h3: Thinking block preservation
+ - h3: Coding excellence
+ - h3: Agent capabilities
+ - h3: Communication and interaction style
+ - h3: Creative content generation
+ - h3: Near-frontier intelligence with blazing speed
+ - h3: Extended thinking capabilities
+ - h3: Context awareness
+ - h3: Strong coding and tool use
+ - h3: Programmatic tool calling (Beta)
+ - h3: Tool search tool (Beta)
+ - h3: Effort parameter (Beta)
+ - h3: Tool use examples (Beta)
+ - h3: Memory tool (Beta)
+ - h3: Context editing
+ - h3: Enhanced stop reasons
+ - h3: Improved tool parameter handling
+ - h3: Token count optimizations
+ - h3: New refusal stop reason
+ - h3: Summarized thinking
+ - h3: Interleaved thinking
+ - h3: Behavioral differences
+ - h3: Updated text editor tool
+ - h3: Updated code execution tool
+ - h3: Pricing
+ - h3: Third-party platform pricing
+ - h3: Availability
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: Keep Claude in character with role prompting and prefilling - Claude Docs.html  (842088 bytes)
+------------------------------
+ - h1: Keep Claude in character with role prompting and prefilling
+ - h3: Example: Enterprise chatbot for role prompting
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: Prefill Claude's response for greater output control - Claude Docs.html  (925943 bytes)
+------------------------------
+ - h1: Prefill Claude's response for greater output control
+ - h2: How to prefill Claude's response
+ - h3: Examples
+ - h3: Example: Structured data extraction without prefilling
+ - h3: Example: Structured data extraction with prefilling
+ - h3: Example: Maintaining character without role prompting
+ - h3: Example: Maintaining character with role prompting
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: Text editor tool - Claude Docs.html  (1432195 bytes)
+------------------------------
+ - h1: Text editor tool
+ - h2: Model compatibility
+ - h2: When to use the text editor tool
+ - h2: Use the text editor tool
+ - h2: Implement the text editor tool
+ - h2: Pricing and token usage
+ - h2: Integrate the text editor tool with other tools
+ - h2: Change log
+ - h2: Next steps
+ - h3: Text editor tool commands
+ - h3: Example view commands
+ - h3: Example str_replace command
+ - h3: Example create command
+ - h3: Example insert command
+ - h3: Example undo_edit command
+ - h3: Example: Fixing a syntax error with the text editor tool
+ - h3: Handle errors
+ - h3: File not found
+ - h3: Multiple matches for replacement
+ - h3: No matches for replacement
+ - h3: Permission errors
+ - h3: Follow implementation best practices
+ - h3: Provide clear context
+ - h3: Be explicit about file paths
+ - h3: Create backups before editing
+ - h3: Handle unique text replacement carefully
+ - h3: Verify changes
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================
+
+==============================
+FILE: Extended thinking tips - Claude Docs.html  (966771 bytes)
+------------------------------
+ - h1: Extended thinking tips
+ - h2: Before diving in
+ - h2: Prompting techniques for extended thinking
+ - h2: Next steps
+ - h3: Technical considerations for extended thinking
+ - h3: Use general instructions first, then troubleshoot with more step-by-step instructions
+ - h3: Multishot prompting with extended thinking
+ - h3: Maximizing instruction following with extended thinking
+ - h3: Using extended thinking to debug and steer Claude's behavior
+ - h3: Making the best of long outputs and longform thinking
+ - h3: Complex STEM problems
+ - h3: Constraint optimization problems
+ - h3: Thinking frameworks
+ - h3: Have Claude reflect on and check its work for improved consistency and error handling
+ - h3: Solutions
+ - h3: Partners
+ - h3: Learn
+ - h3: Company
+ - h3: Learn
+ - h3: Help and security
+ - h3: Terms and policies
+==============================

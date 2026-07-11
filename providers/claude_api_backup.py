@@ -3,6 +3,7 @@ import os
 import requests
 from typing import List, Dict, Any
 
+
 class ClaudeProvider:
     def __init__(self, model="claude-3-5-sonnet-20240620", max_tokens=4096, system_prompt=None):
         self.model = model
@@ -19,15 +20,11 @@ class ClaudeProvider:
         self.headers = {
             "x-api-key": self.api_key,
             "anthropic-version": "2023-06-01",
-            "content-type": "application/json"
+            "content-type": "application/json",
         }
 
     def chat(self, messages: List[Dict[str, Any]], **kwargs) -> str:
-        payload = {
-            "model": self.model,
-            "max_tokens": self.max_tokens,
-            "messages": messages
-        }
+        payload = {"model": self.model, "max_tokens": self.max_tokens, "messages": messages}
 
         if self.system_prompt:
             payload["system"] = self.system_prompt

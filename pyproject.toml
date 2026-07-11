@@ -1,8 +1,9 @@
 [tool.ruff]
-target-version = "py311"
+target-version = "py312"
 line-length = 100
 exclude = [
   "prompt_corpus/raw",
+  "scripts",
   "**/*.ipynb",
 ]
 
@@ -20,3 +21,19 @@ ignore = [
 [tool.pytest.ini_options]
 pythonpath = ["."]
 
+[tool.mypy]
+python_version = "3.12"
+explicit_package_bases = true
+exclude = "(^scripts/|^tools/|^providers/.*_backup\\.py$)"
+
+[[tool.mypy.overrides]]
+module = ["insightface.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["sklearn.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["cv2.*"]
+ignore_missing_imports = true

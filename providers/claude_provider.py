@@ -8,7 +8,7 @@ from __future__ import annotations
 from typing import Any
 
 from .base import BaseProvider
-from .claude_api import chat, ClaudeAPIError
+from .claude_api import ClaudeProvider
 
 
 class ClaudeSonnetProvider(BaseProvider):
@@ -45,9 +45,16 @@ class ClaudeSonnetProvider(BaseProvider):
         max_tokens = kwargs.get("max_tokens", 4096)
         temperature = kwargs.get("temperature", 0.2)
 
-        return chat(
-            system_prompt=system_prompt,
-            user_prompt=user_prompt,
+        model = str(kwargs.get("model", "claude-4-5-sonnet-latest"))
+
+        provider = ClaudeProvider(
+            model=model,
             max_tokens=max_tokens,
+            system_prompt=system_prompt,
             temperature=temperature,
+        )
+
+        return provider.chat(
+            messages=[{"role": "user", "content": user_prompt}],
+            max_tokens=max_tokens,
         )
